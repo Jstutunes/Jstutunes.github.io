@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	
+	<Title>Jeremy Stuart Music</Title>
+	
+	<style>	
+		html,body {
+			margin:0;
+			padding:0;
+		}
+		.parallax{
+			background-image: url("back1.jpg");
+			height: 500px;
+			width:100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.parallax2{
+			background-image: url("back1-fade.jpg");
+			padding-top: 50px;
+			padding-bottom: 50px;
+			text-align:center;
+			width:100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.parallax3{
+			background-image: url("back2.jpg");
+			height: 500px;
+			width:100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.parallax4{
+			background-image: url("back2-fade.jpg");
+			padding-top: 50px;
+			padding-bottom: 50px;
+			text-align:center;
+			width:100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.info {
+			font-size:20px;
+			width:100%;
+			background-color:#ededed;
+			vertical-align: center;
+			text-align:center;
+			padding-top:30px;
+			padding-bottom:30px;
+		}
+		.divider {
+			font-size:20px;
+			width:100%;
+			background-color:#000000;
+			vertical-align: center;
+			text-align:center;
+			padding-top:15px;
+			padding-bottom:15px;
+		}
+		.button0 {
+			background-color: white;
+			border: none;
+			font-size: 26px;
+			font-weight: bold;
+			float: left;
+			padding: 8px 20px;
+			font-family:cambria;
+		}
+		.button1 {
+			background-color: white;
+			border: none;
+			font-size: 20px;
+			transition-duration: 0.4s;
+			float: left;
+			padding: 8px 40px;
+		}
+		.button1:hover {
+			background-color: grey; /* Green */
+			color: white;
+		}
+		ul{
+			list-style-type: none;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		li {
+			float: right;
+		}
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			font-size: 22px;
+			padding: 15px 20px;
+			text-decoration: none;
+			font-family:'raleway';
+		}
+		li a:hover{
+			background-color: #111;
+		}
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+		::-webkit-scrollbar-track {
+			background: #f1f1f1; 
+		}
+		::-webkit-scrollbar-thumb {
+			background: #888; 
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: #555; 
+		}
+		@font-face{
+			font-family:"raleway";
+			src:url("fonts/raleway-regular.ttf");
+		}
+		@font-face{
+			font-family:"east-sea";
+			src:url("fonts/EastSeaDokdo-Regular.ttf");
+		}
+		@font-face{
+			font-family:"teko";
+			src:url("fonts/Teko-Light.ttf");
+		}
+		@font-face{
+			font-family:"poorstory";
+			src:url("fonts/PoorStory-Regular.ttf");
+		}
+	</style>
+	<div>
+		<ul style="z-index:2">
+			<li id="contactButton"><a>Contact</a></li>
+			<li id="aboutButton"><a>About</a></li>
+			<li id="lessonButton"><a>Lessons</a></li>
+			<li id="musicButton"><a>Music</a></li>
+			<li style="float:left" id="topButton"><a>Jeremy Stuart</a></li>
+		</ul>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<script>
+		$(function() {
+			$('#musicButton').click(function(){
+				$("html, body").animate({ scrollTop: $('#music').offset().top }, 1000);
+			});
+			$('#lessonButton').click(function(){
+				$("html, body").animate({ scrollTop: $('#lessons').offset().top }, 1000);
+			});
+			$('#aboutButton').click(function(){
+				$("html, body").animate({ scrollTop: $('#about').offset().top }, 1000);
+			});
+			$('#contactButton').click(function(){
+				$("html, body").animate({ scrollTop: $('#contact').offset().top }, 1000);
+			});
+			$('#topButton').click(function(){
+				$("html, body").animate({ scrollTop: $('#top').offset().top }, 1000);
+			});
+		});
+		</script>
+	</div>
+	
+</HEAD>
+<BODY>
+	<div class="parallax" id="top"></div>
+	<div class="parallax2">
+		<div>
+			<p style="font-family:'raleway';font-size:40px;">[TITLE CAPTION 1]</p>
+		</div>
+	</div>
+	<div class="parallax"></div>
+	<div class="parallax2">
+		<p style="font-family:'raleway';font-size:40px;">[TITLE CAPTION 2]</p>
+	</div>
+	<div class="parallax"></div>
+	<div class="parallax2">
+		<p style="font-family:'raleway';font-size:40px;">[TITLE CAPTION 3]</p>
+	</div>
+	<div class="parallax"></div>
+	
+	<div class="info" id="music">
+		<p style="font-family:'raleway';font-size:40px;"> Out of the Blue </p>
+		<p style="font-family:'teko';font-size:30px;"> A song about innocence, about sorrow, about happiness and grief, all rolled into one loogie</p>
+		<audio controls>
+		<source src="song.mp3" type='audio/mp3'>
+		<!-- The next line is only executed if the browser doesn't support MP4 files -->
+		<p>Your user agent does not support the HTML5 Audio element.</p>
+		</audio>
+	</div>
+	<div class="info" style="background-color:#7fa1d8">
+		<p style="font-family:'raleway';font-size:40px;"> Still Waiting </p>
+		<p style="font-family:'teko';font-size:30px;"> Have you ever experienced that moment where you're waiting for your pizza, and it just doesn't seem to come? That's what this song's about.</p>
+		<audio controls>
+		<source src="womp.mp3" type='audio/mp3'>
+		<!-- The next line is only executed if the browser doesn't support MP4 files -->
+		<p>Your user agent does not support the HTML5 Audio element.</p>
+		</audio>
+	</div>
+	<div class="info" style="background-color:#6b8abc">
+		<p style="font-family:'raleway';font-size:40px;"> Gatekeeper </p>
+		<p style="font-family:'teko';font-size:30px;"> A gatekeeper is someone who regulates access to something. What do you regulate?</p>
+		<audio controls>
+		<source src="song.mp3" type='audio/mp3'>
+		<!-- The next line is only executed if the browser doesn't support MP4 files -->
+		<p>Your user agent does not support the HTML5 Audio element.</p>
+		</audio>
+	</div>
+	<div class="info" style="background-color:#516c99">
+		<p style="font-family:'raleway';font-size:40px;"> Elephant </p>
+		<p style="font-family:'teko';font-size:30px;"> My favourite animal, and quite frankly, it should be yours too</p>
+		<audio controls style="z-index:1">
+		<source src="song.mp3" type='audio/mp3'>
+		<!-- The next line is only executed if the browser doesn't support MP4 files -->
+		<p>Your user agent does not support the HTML5 Audio element.</p>
+		</audio>
+	</div>
+	<div class="info" style="background-color:#3a5177">
+		<p style="font-family:'raleway';font-size:40px;"> Calloused Fingers </p>
+		<p style="font-family:'teko';font-size:30px;"> I like to play the guitar, and sometimes if I play too much this happens to me. In fact it happened while I created this song. True fact.</p>
+		<audio controls>
+		<source src="song.mp3" type='audio/mp3'>
+		<!-- The next line is only executed if the browser doesn't support MP4 files -->
+		<p>Your user agent does not support the HTML5 Audio element.</p>
+		</audio>
+	</div>
+	
+	<div class="parallax"></div>
+	
+	<div class="info" id ="lessons" >
+		<p style="font-family:'raleway';font-size:40px;"> Lessons</p>
+		<p style="font-family:'teko';font-size:30px;text-align:center;padding-left:100px;padding-right:100px"> Jeremy Teaches music at the Tannery school of music. Specializing in Guitar, Ukulele, Vocals and Beginner Piano, Jeremy is always ready and willing to teach students with a passion to learn about music. To find out more, check out <a href="http://www.tanneryschoolofmusic.com/lessons.html">The Tannery's Programs </a></p>
+	</div>
+	
+	<div class="parallax"></div>
+	<div class="divider"></div>
+	<div class="parallax4" id="about">
+			<p style="text-align:center;font-family:'raleway';font-size:40px;"> About </p>
+			<p style="font-family:'teko';font-size:30px;text-align:center;padding-left:100px;padding-right:100px">Jeremy Stuart is a singer/songwriter hailing from Calgary, Alberta. Having produced music since early 2017, Jeremy constantly seeks to broaden his horizons, be it by trying new songs or teaching new students.</p>
+	</div>
+	
+	<div class="parallax3"></div>
+	
+	<div class="info" id="contact">
+			<p style="font-family:'raleway';font-size:40px;">Contact</p>
+			<p style="font-family:'teko';font-size:30px;">Jeremy can be emailed at: <a href="jeremy@stuart.com">jeremy@stuart.com</a></p>
+	</div>
+	
+	<div class="parallax" style="height:300px"></div>
+	
+	<div style="height:50px">
+		<TABLE>
+		<TR>
+			<TD>
+				<P style="font-family:'raleway';padding-left:20px">Find me at:</p>
+			</TD>
+			<TD>
+				<a href="https://www.facebook.com/Jstutunes/"><img src="fblogo.png"style="width:50px;height:50px;"></a>
+				<a href="https://twitter.com/"><img src="twitter.png" style="width:50px;height:50px;"></a>
+				<a href="https://jstutunes.bandcamp.com/"><img src="bc.svg" style="width:50px;height:50px;"></a>
+				<a href="https://soundcloud.com/jstutunes"><img src="soundcloud.png" style="width:50px;height:50px;"></a>
+			</TD>
+		</TR>
+	</TABLE>
+		
+	</div>
+	
+	
+</BODY>
+</HTML>
